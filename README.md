@@ -12,14 +12,14 @@
 Use the "type" property to specify monitoring class
 There is a property called wrapped using to specify the wrapped class to inspect
 
-### Describe/configure the source ###
+### describe/configure the source ###
 
     a1.sources.r1.type = com.octo.flume.monitoring.SourceMonitor
     a1.sources.r1.wrappedClass = org.apache.flume.source.SequenceGeneratorSource
     a1.sources.r1.type = seq
     a1.sources.r1.batchSize = 100
 
-### Describe interceptor ###
+### describe interceptor ###
 
     a1.sources.r1.interceptors = i1
     a1.sources.r1.interceptors.i1.type = com.octo.flume.monitoring.InterceptorMonitor$Builder
@@ -28,10 +28,14 @@ There is a property called wrapped using to specify the wrapped class to inspect
     a1.sources.r1.interceptors.i1.regex = 0{3}
 
 
-### Describe the sink ###
+### describe the sink ###
 
     a1.sinks.k1.type = file_roll
     a1.sinks.k1.sink.directory = reception
     a1.sinks.k1.wrappedClass = org.apache.flume.sink.RollingFileSink
     a1.sinks.k1.sink.serializer = com.octo.flume.monitoring.EventSerializerMonitor$Builder
     a1.sinks.k1.sink.serializer.wrappedClass = org.apache.flume.serialization.BodyTextEventSerializer$Builder
+
+
+## start agent with http monitoring ##
+flume-ng agent --conf conf --conf-file flume.conf --name a1 -Dflume.root.logger=DEBUG,console -Dflume.monitoring.type=http -Dflume.monitoring.port=46100

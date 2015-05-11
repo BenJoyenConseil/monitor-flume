@@ -1,4 +1,4 @@
-package com.socgen.shield;
+package com.octo.flume.monitoring;
 
 import org.apache.flume.*;
 import org.apache.flume.channel.ChannelProcessor;

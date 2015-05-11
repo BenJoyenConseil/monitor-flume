@@ -38,4 +38,4 @@ There is a property called wrapped using to specify the wrapped class to inspect
 
 
 ## start agent with http monitoring ##
-flume-ng agent --conf conf --conf-file flume.conf --name a1 -Dflume.root.logger=DEBUG,console -Dflume.monitoring.type=http -Dflume.monitoring.port=46100
+    flume-ng agent --conf conf --conf-file flume.conf --name a1 -Dflume.root.logger=DEBUG,console -Dflume.monitoring.type=http -Dflume.monitoring.port=46100

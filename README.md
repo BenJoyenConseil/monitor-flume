@@ -11,7 +11,13 @@
 ## how to configure agent ##
 Use the "type" property to specify monitoring class
 There is a property called wrapped using to specify the wrapped class to inspect
+There are wrappers for :
+ - Source (of type PollableSource)
+ - Sink
+ - Interceptor
+ - Serializer
 
+## example of configuration ##
 ### describe/configure the source ###
 
     a1.sources.r1.type = com.octo.flume.monitoring.SourceMonitor
@@ -30,9 +36,12 @@ There is a property called wrapped using to specify the wrapped class to inspect
 
 ### describe the sink ###
 
-    a1.sinks.k1.type = file_roll
-    a1.sinks.k1.sink.directory = reception
+    a1.sinks.k1.type = com.octo.flume.monitoring.SinkMonitor
     a1.sinks.k1.wrappedClass = org.apache.flume.sink.RollingFileSink
+    a1.sinks.k1.sink.directory = reception
+
+## describe the serializer ##
+
     a1.sinks.k1.sink.serializer = com.octo.flume.monitoring.EventSerializerMonitor$Builder
     a1.sinks.k1.sink.serializer.wrappedClass = org.apache.flume.serialization.BodyTextEventSerializer$Builder
 

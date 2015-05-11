@@ -13,7 +13,7 @@ public class InterceptorMonitor implements Interceptor {
 
     private InterceptorMonitor(Interceptor wrappedClass) {
         this.wrapped = wrappedClass;
-        counters = new ShieldCounters("shield.interceptor");
+        counters = new ShieldCounters("monitor.interceptor");
     }
 
     @Override

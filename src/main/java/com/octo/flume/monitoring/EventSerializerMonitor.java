@@ -17,7 +17,7 @@ public class EventSerializerMonitor implements EventSerializer {
 
     public EventSerializerMonitor(EventSerializer wrappedClass) {
         this.wrapped = wrappedClass;
-        counters = new ShieldCounters("shield.serializer." + System.currentTimeMillis());
+        counters = new ShieldCounters("monitor.serializer." + System.currentTimeMillis());
         counters.start();
     }
 

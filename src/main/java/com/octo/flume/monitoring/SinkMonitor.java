@@ -15,7 +15,7 @@ public class SinkMonitor extends AbstractSink implements Sink, Configurable {
     private Sink wrapped;
 
     public SinkMonitor() {
-        counters = new ShieldCounters("shield.sink");
+        counters = new ShieldCounters("monitor.sink");
     }
 
     @Override

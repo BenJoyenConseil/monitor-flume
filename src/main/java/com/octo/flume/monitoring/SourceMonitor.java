@@ -17,7 +17,7 @@ public class SourceMonitor implements Source, Configurable, PollableSource {
 
     public SourceMonitor() {
         super();
-        counters = new ShieldCounters("shield.source");
+        counters = new ShieldCounters("monitor.source");
     }
 
     @Override

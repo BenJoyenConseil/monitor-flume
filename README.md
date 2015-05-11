@@ -2,15 +2,15 @@
 
 ## metrics ##
 
-    shieldStartTime : source startTime
-    in : number of input events in the given interceptor
-    out : number of output events in the given interceptor
-    rejected : number of rejected events by the interceptor
-    countBatchSizeProcessed : number of processed batchSize
+ - shieldStartTime : source startTime
+ - in : number of input events in the given interceptor
+ - out : number of output events in the given interceptor
+ - rejected : number of rejected events by the interceptor
+ - countBatchSizeProcessed : number of processed batchSize
 
 ## how to configure agent ##
-Use the "type" property to specify monitoring class
-There is a property called wrapped using to specify the wrapped class to inspect
+Use the "type" property to specify monitoring class.
+There is a property called wrapped used to specify the wrapped class to inspect.
 There are wrappers for :
  - Source (of type PollableSource)
  - Sink

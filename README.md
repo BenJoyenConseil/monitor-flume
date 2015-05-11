@@ -40,7 +40,7 @@ There are wrappers for :
     a1.sinks.k1.wrappedClass = org.apache.flume.sink.RollingFileSink
     a1.sinks.k1.sink.directory = reception
 
-## describe the serializer ##
+### describe the serializer ###
 
     a1.sinks.k1.sink.serializer = com.octo.flume.monitoring.EventSerializerMonitor$Builder
     a1.sinks.k1.sink.serializer.wrappedClass = org.apache.flume.serialization.BodyTextEventSerializer$Builder

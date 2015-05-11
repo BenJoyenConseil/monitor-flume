@@ -10,7 +10,7 @@
 
 ## how to configure agent ##
 Use the "type" property to specify monitoring class.
-There is a property called wrapped used to specify the wrapped class to inspect.
+There is a property called "wrappedClass" used to specify the class to inspect.
 
 Existing wrappers :
  - Source (of type PollableSource)

@@ -13,7 +13,7 @@ public class MonitorCounter extends MonitoredCounterGroup implements MonitorCoun
     private static final String[] ATTRIBUTES = {COUNTER_EVENT_INPUT, COUNTER_EVENT_OUTPUT, START_TIME, COUNTER_REJECTED, COUNT_BATCH_SIZE_PROCESSED};
 
     protected MonitorCounter(String name) {
-        super(Type.SOURCE, name, ATTRIBUTES);
+        super(Type.OTHER, name, ATTRIBUTES);
     }
 
     public void setShieldStartTime(long startTime) {

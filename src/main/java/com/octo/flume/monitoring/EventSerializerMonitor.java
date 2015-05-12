@@ -13,11 +13,11 @@ import java.io.OutputStream;
 
 public class EventSerializerMonitor implements EventSerializer {
     private final EventSerializer wrapped;
-    private final ShieldCounters counters;
+    private final MonitorCounter counters;
 
     public EventSerializerMonitor(EventSerializer wrappedClass) {
         this.wrapped = wrappedClass;
-        counters = new ShieldCounters("monitor.serializer." + System.currentTimeMillis());
+        counters = new MonitorCounter("monitor.serializer." + System.currentTimeMillis());
         counters.start();
     }
 

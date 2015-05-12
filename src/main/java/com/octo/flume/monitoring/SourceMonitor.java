@@ -12,12 +12,12 @@ import org.apache.flume.lifecycle.LifecycleState;
 public class SourceMonitor implements Source, Configurable, PollableSource {
 
     private PollableSource wrappedSource;
-    private ShieldCounters counters;
+    private MonitorCounter counters;
     private String name = "r1";
 
     public SourceMonitor() {
         super();
-        counters = new ShieldCounters("monitor.source");
+        counters = new MonitorCounter("monitor.source");
     }
 
     @Override

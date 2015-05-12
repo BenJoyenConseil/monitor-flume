@@ -2,17 +2,17 @@ package com.octo.flume.monitoring;
 
 import org.apache.flume.instrumentation.MonitoredCounterGroup;
 
-public class ShieldCounters extends MonitoredCounterGroup implements MonitorCounterMXBean {
+public class MonitorCounter extends MonitoredCounterGroup implements MonitorCounterMXBean {
 
-    private static final String COUNTER_EVENT_INPUT = "shield.in.events.count";
-    private static final String COUNTER_EVENT_OUTPUT = "shield.out.events.count";
-    private static final String COUNTER_REJECTED = "shield.rejected.event.count";
-    private static final String START_TIME = "shield.start.time";
-    private static final String COUNT_BATCH_SIZE_PROCESSED = "shield.batchSize.processed.count";
+    private static final String COUNTER_EVENT_INPUT = "monitor.in.events.count";
+    private static final String COUNTER_EVENT_OUTPUT = "monitor.out.events.count";
+    private static final String COUNTER_REJECTED = "monitor.rejected.event.count";
+    private static final String START_TIME = "monitor.start.time";
+    private static final String COUNT_BATCH_SIZE_PROCESSED = "monitor.batchSize.processed.count";
 
     private static final String[] ATTRIBUTES = {COUNTER_EVENT_INPUT, COUNTER_EVENT_OUTPUT, START_TIME, COUNTER_REJECTED, COUNT_BATCH_SIZE_PROCESSED};
 
-    protected ShieldCounters(String name) {
+    protected MonitorCounter(String name) {
         super(Type.SOURCE, name, ATTRIBUTES);
     }
 

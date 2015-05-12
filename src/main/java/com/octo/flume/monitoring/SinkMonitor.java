@@ -11,11 +11,11 @@ import org.apache.flume.sink.AbstractSink;
 
 public class SinkMonitor extends AbstractSink implements Sink, Configurable {
 
-    private final ShieldCounters counters;
+    private final MonitorCounter counters;
     private Sink wrapped;
 
     public SinkMonitor() {
-        counters = new ShieldCounters("monitor.sink");
+        counters = new MonitorCounter("monitor.sink");
     }
 
     @Override

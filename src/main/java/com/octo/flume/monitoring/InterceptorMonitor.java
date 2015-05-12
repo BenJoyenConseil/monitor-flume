@@ -9,11 +9,11 @@ import java.util.List;
 public class InterceptorMonitor implements Interceptor {
 
     private final Interceptor wrapped;
-    private ShieldCounters counters;
+    private MonitorCounter counters;
 
     private InterceptorMonitor(Interceptor wrappedClass) {
         this.wrapped = wrappedClass;
-        counters = new ShieldCounters("monitor.interceptor");
+        counters = new MonitorCounter("monitor.interceptor");
     }
 
     @Override
